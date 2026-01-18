@@ -1,0 +1,198 @@
+@font-face {
+    font-family: 'HsSantoki20';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2405@1.0/HSSanTokki20-Regular.woff2') format('woff2');
+    font-weight: normal;
+    font-display: swap;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Kosugi+Maru&display=swap');
+
+body {
+	margin: 0;
+	padding: 0;
+	background-color: #101010; 
+	color: #ffffff;
+	display: flex;
+	justify-content: center;
+}
+
+/* 언어별 폰트 설정 */
+body.lang-ko {
+    font-family: 'HsSantoki20', sans-serif;
+}
+
+body.lang-en {
+    font-family: 'HsSantoki20', sans-serif;
+}
+
+body.lang-ja {
+    font-family: "Kosugi Maru", sans-serif;
+}
+
+body.lang-cc {
+    font-family: "Kosugi Maru", sans-serif;
+}
+
+/* 중앙 영역 */
+.container {
+	width: 56.25%;
+	background-color: #202020;
+	padding: 40px;
+	line-height: 1.6;
+}
+
+/* 섹션 구분 */
+section {
+	margin-bottom: 60px;
+	display: flex;
+	flex-wrap: wrap
+}
+
+h1 {
+	font-size: 3rem;
+	margin: 10px;
+	color: #ffffff;
+}
+
+h2 {
+    font-family: 'HsSantoki20', sans-serif;
+	font-size: 2rem;
+	border-bottom: 2px solid #303030;
+	padding-bottom: 10px;
+	margin: 10px;
+	color: #eabf8c;
+}
+
+h3 {
+	font-size: 1.5rem;
+	margin-top: 0;
+  	margin-bottom: 5px;
+	color: #eabf8c;
+}
+
+.profile-img {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    margin: 20px; /* 테두리가 잘리지 않도록 여백을 좀 더 줬어 */
+    
+    /* 초록색 테두리 설정 */
+    outline: 6px solid #3A7541; 
+    
+    /* 사진과 테두리 사이의 간격 (숫자를 키울수록 멀어져) */
+    outline-offset: 6px;
+}
+
+.site-card {
+    width: 120px;
+    height: 120px;
+    display: flex;
+    border-radius: 40px;
+	align-items: center;
+	justify-content: center;
+    cursor: pointer;
+    margin: 10px;
+    background-color: #303030;
+}
+
+/* 아이콘 스타일 */
+.site-icon {
+    width: 120px;
+    height: 120px;
+    border-radius: 40px;
+    display: block;
+}
+
+/* 텍스트 스타일 (평소에는 숨김) */
+.site-text {
+    display: none;
+    color: white;
+	padding: 20px;
+}
+
+/* --- 마우스 호버 시 상태 --- */
+
+
+.site-card:hover .site-icon {
+    display: none;
+}
+
+.site-card:hover .site-text {
+    display: block;
+}
+/* 스크롤바 */
+::-webkit-scrollbar {
+	width: 8px;
+}
+::-webkit-scrollbar-track {
+	background: #101010;
+}
+::-webkit-scrollbar-thumb {
+	background: #333;
+	border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+	background: #444;
+}
+
+/* 속성 */
+.details {
+	height: fit-content;
+	width: fit-content;
+	background: #303030;
+	border-radius: 40px;
+	margin: 10px;
+	padding: 20px;
+}
+
+.emoji {
+	height: 1em; 
+	width: auto;
+	vertical-align: middle;
+	margin-bottom: 0.15em; 
+	display: inline-block;
+}
+
+.color {
+	width: 1em;
+	height: 1em;
+	border-radius: 0.2em;
+	margin-bottom: 0.15em; 
+	vertical-align: middle;
+	display: inline-block;
+}
+
+a {
+	text-decoration: none;
+}
+
+/* 언어 선택 컨테이너 - 오른쪽 정렬 혹은 중앙 정렬 */
+.lang-selector {
+    display: flex;
+    justify-content: flex-end; /* 오른쪽 정렬 (중앙은 center) */
+    gap: 10px;
+}
+
+/* 기본 버튼 스타일 (.details와 .site-card 스타일 계승) */
+.lang-btn {
+    font-family: 'HsSantoki20', "Kosugi Maru", sans-serif;
+    background-color: #303030;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 40px; /* 기존 디자인의 둥근 모서리 적용 */
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+/* 호버 시 효과 */
+.lang-btn:hover {
+    background-color: #404040;
+}
+
+/* 선택된 버튼 (활성화 상태) - 포인트 컬러 적용 */
+.lang-btn.active {
+    background-color: #eabf8c;
+    color: #202020; /* 배경이 밝아지니 글자는 어둡게 */
+    font-weight: bold;
+}
