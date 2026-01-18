@@ -1,11 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Kosugi+Maru&display=swap');
+
 @font-face {
     font-family: 'HsSantoki20';
     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2405@1.0/HSSanTokki20-Regular.woff2') format('woff2');
     font-weight: normal;
     font-display: swap;
 }
-
-@import url('https://fonts.googleapis.com/css2?family=Kosugi+Maru&display=swap');
 
 body {
 	margin: 0;
