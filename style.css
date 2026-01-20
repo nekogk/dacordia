@@ -35,69 +35,69 @@ body.lang-cc {
 
 /* 중앙 영역 */
 .container {
-    font-size: clamp(0.4rem, 2vw, 1rem);
+    font-size: clamp(0.6rem, 2vw, 1rem);
     width: clamp(480px, 62.5%, 1920px);
     margin: 0 auto;
     background-color: #202020;
-    padding: clamp(0.8rem, 4vw, 2rem);
+    padding: clamp(1.2rem, 4vw, 2rem);
     line-height: 1.5;
 }
 
 /* 섹션 구분 */
 section {
-	margin-bottom: clamp(0.8rem, 4vw, 2rem);
+	margin-bottom: clamp(1.2rem, 4vw, 2rem);
 	display: flex;
 	flex-wrap: wrap
 }
 
 h1 {
-    font-size: clamp(1.2rem, 6vw, 3rem);
-	margin: clamp(0.4rem, 2vw, 1rem);
+    font-size: clamp(1.8rem, 6vw, 3rem);
+	margin: clamp(0.6rem, 2vw, 1rem);
 	color: #ffffff;
 }
 
 h2 {
     font-family: 'HsSantoki20', sans-serif;
-    font-size: clamp(0.8rem, 4vw, 2rem);
-	border-bottom: clamp(0.1rem, 0.5vw, 0.25rem) solid #303030;
-	padding-bottom: clamp(0.4rem, 2vw, 1rem);
-	margin: clamp(0.4rem, 2vw, 1rem);
+    font-size: clamp(1.2rem, 4vw, 2rem);
+	border-bottom: clamp(0.15rem, 0.5vw, 0.25rem) solid #303030;
+	padding-bottom: clamp(0.6rem, 2vw, 1rem);
+	margin: clamp(0.6rem, 2vw, 1rem);
 	color: #eabf8c;
 }
 
 h3 {
-    font-size: clamp(0.6rem, 3vw, 1.5rem);
+    font-size: clamp(0.9rem, 3vw, 1.5rem);
     margin-top: 0;
-  	margin-bottom: clamp(0.2rem, 1vw, 0.5rem);
+  	margin-bottom: clamp(0.3rem, 1vw, 0.5rem);
 	color: #eabf8c;
 }
 
 .profile-img {
-    width: clamp(4.8rem, 24vw, 12rem);
-    height: clamp(4.8rem, 24vw, 12rem);
+    width: clamp(7.2rem, 24vw, 12rem);
+    height: clamp(7.2rem, 24vw, 12rem);
     border-radius: 50%;
-    margin: clamp(0.4rem, 2vw, 1rem);
-    outline: clamp(0.2rem, 1vw, 0.5rem) solid #3A7541; 
-    outline-offset: clamp(0.2rem, 1vw, 0.5rem);
+    margin: clamp(0.6rem, 2vw, 1rem);
+    outline: clamp(0.3rem, 1vw, 0.5rem) solid #3A7541; 
+    outline-offset: clamp(0.3rem, 1vw, 0.5rem);
 }
 
 .site-card {
-    width: clamp(3.2rem, 16vw, 8rem);
-    height: clamp(3.2rem, 16vw, 8rem);
+    width: clamp(4.8rem, 16vw, 8rem);
+    height: clamp(4.8rem, 16vw, 8rem);
     display: flex;
-    border-radius: clamp(0.8rem, 4vw, 2rem);
+    border-radius: clamp(1.2rem, 4vw, 2rem);
 	align-items: center;
 	justify-content: center;
     cursor: pointer;
-    margin: clamp(0.2rem, 1vw, 0.5rem);
+    margin: clamp(0.3rem, 1vw, 0.5rem);
     background-color: #303030;
 }
 
 /* 아이콘 스타일 */
 .site-icon {
-    width: clamp(3.2rem, 16vw, 8rem);
-    height: clamp(3.2rem, 16vw, 8rem);
-    border-radius: clamp(0.8rem, 4vw, 2rem);
+    width: clamp(4.8rem, 16vw, 8rem);
+    height: clamp(4.8rem, 16vw, 8rem);
+    border-radius: clamp(1.2rem, 4vw, 2rem);
     display: block;
 }
 
@@ -105,7 +105,7 @@ h3 {
 .site-text {
     display: none;
     color: white;
-	padding: clamp(0.4rem, 2vw, 1rem);
+	padding: clamp(0.6rem, 2vw, 1rem);
 }
 
 /* 마우스 호버 시 상태 */
@@ -118,14 +118,14 @@ h3 {
 }
 /* 스크롤바 */
 ::-webkit-scrollbar {
-	width: clamp(0.2rem, 1vw, 0.5rem);
+	width: clamp(0.3rem, 1vw, 0.5rem);
 }
 ::-webkit-scrollbar-track {
 	background: #101010;
 }
 ::-webkit-scrollbar-thumb {
 	background: #303030;
-	border-radius: clamp(0.2rem, 1vw, 0.5rem);
+	border-radius: clamp(0.3rem, 1vw, 0.5rem);
 }
 ::-webkit-scrollbar-thumb:hover {
 	background: #404040;
@@ -136,9 +136,9 @@ h3 {
 	height: fit-content;
 	width: fit-content;
 	background: #303030;
-	border-radius: clamp(0.8rem, 4vw, 2rem);
-	margin: clamp(0.2rem, 1vw, 0.5rem);
-	padding: clamp(0.4rem, 2vw, 1rem);
+	border-radius: clamp(1.2rem, 4vw, 2rem);
+	margin: clamp(0.3rem, 1vw, 0.5rem);
+	padding: clamp(0.6rem, 2vw, 1rem);
 }
 
 .emoji {
@@ -166,7 +166,7 @@ a {
 .lang-selector {
     display: flex;
     justify-content: flex-end; /* 오른쪽 정렬 */
-    gap: clamp(0.2rem, 1vw, 0.5rem);
+    gap: clamp(0.3rem, 1vw, 0.5rem);
 }
 
 /* 기본 버튼 스타일 */
@@ -175,8 +175,8 @@ a {
     background-color: #303030;
     color: #ffffff;
     border: none;
-    padding: clamp(0.2rem, 1vw, 0.5rem) clamp(0.4rem, 2vw, 1rem);
-    border-radius: clamp(0.8rem, 4vw, 2rem);
+    padding: clamp(0.3rem, 1vw, 0.5rem) clamp(0.6rem, 2vw, 1rem);
+    border-radius: clamp(1.2rem, 4vw, 2rem);
     cursor: pointer;
 }
 
