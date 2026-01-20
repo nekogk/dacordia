@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Kosugi+Maru&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 @font-face {
     font-family: 'HsSantoki20';
     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2405@1.0/HSSanTokki20-Regular.woff2') format('woff2');
@@ -31,6 +31,14 @@ body.lang-ja {
 
 body.lang-cc {
     font-family: "Kosugi Maru", sans-serif;
+}
+
+body.lang-cc {
+    font-family: "Kosugi Maru", sans-serif;
+}
+
+body.lang-sa {
+    font-family: "Poppins", sans-serif;
 }
 
 /* 중앙 영역 */
@@ -172,7 +180,7 @@ a {
 
 /* 기본 버튼 스타일 */
 .lang-btn {
-    font-family: 'HsSantoki20', "Kosugi Maru", sans-serif;
+    font-family: 'HsSantoki20', "Kosugi Maru", "Poppins", sans-serif;
     font-size: clamp(0.6rem, 2vw, 1rem);
     background-color: #303030;
     color: #ffffff;
