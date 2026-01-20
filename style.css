@@ -36,7 +36,7 @@ body.lang-cc {
 /* 중앙 영역 */
 .container {
     font-size: clamp(0.6rem, 2vw, 1rem);
-    width: clamp(480px, 62.5%, 1920px);
+    width: clamp(720px, 62.5%, 1680px);
     margin: 0 auto;
     background-color: #202020;
     padding: clamp(1.2rem, 4vw, 2rem);
@@ -165,7 +165,7 @@ a {
 /* 언어 선택 컨테이너 */
 .lang-selector {
     display: flex;
-    justify-content: flex-end; /* 오른쪽 정렬 */
+    justify-content: flex-end;
     gap: clamp(0.3rem, 1vw, 0.5rem);
 }
 
