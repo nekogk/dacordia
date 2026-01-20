@@ -172,6 +172,7 @@ a {
 /* 기본 버튼 스타일 */
 .lang-btn {
     font-family: 'HsSantoki20', "Kosugi Maru", sans-serif;
+    font-size: clamp(0.6rem, 2vw, 1rem);
     background-color: #303030;
     color: #ffffff;
     border: none;
