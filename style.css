@@ -1,6 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Kiwi+Maru&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Mukta&display=swap');
-
 @font-face {
     font-family: 'HsSantoki20';
     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2405@1.0/HSSanTokki20-Regular.woff2') format('woff2');
@@ -32,10 +30,6 @@ body.lang-ja {
 
 body.lang-cc {
     font-family: "Kiwi Maru", sans-serif;
-}
-
-body.lang-sa {
-    font-family: "Mukta", sans-serif;
 }
 
 /* 중앙 영역 */
