@@ -12,10 +12,18 @@ async function changeLanguage(lang) {
         document.querySelectorAll('[data-i18n]').forEach(el => {
             const key = el.getAttribute('data-i18n');
             if (data[key]) {
+                const rawValue = data[key];
+
+                // [단어](루비) 패턴을 <ruby> 태그로 변환하는 정규표현식
+                const rubyConverted = rawValue.replace(/\[(.+?)\]\((.+?)\)/g, '<ruby>$1<rt>$2</rt></ruby>');
+
                 if (el.tagName === 'TITLE') {
-                    document.title = data[key];
+                    // 브라우저 탭 제목(TITLE)에는 HTML 태그가 안 먹히니까,
+                    // 루비 문법에서 '단어'만 추출해서 넣어줌
+                    document.title = rawValue.replace(/\[(.+?)\]\((.+?)\)/g, '$1');
                 } else {
-                    el.textContent = data[key];
+                    // 일반 요소에는 HTML 형태로 삽입 (textContent 대신 innerHTML 사용)
+                    el.innerHTML = rubyConverted;
                 }
             }
         });
@@ -23,7 +31,7 @@ async function changeLanguage(lang) {
         // 3. 폰트 변경을 위해 body 클래스 교체
         document.body.className = `lang-${lang}`;
 
-        // 4. 버튼 활성화 상태 업데이트 (CSS 클래스 적용)
+        // 4. 버튼 활성화 상태 업데이트
         langButtons.forEach(btn => {
             btn.classList.toggle('active', btn.getAttribute('data-value') === lang);
         });
@@ -36,7 +44,7 @@ async function changeLanguage(lang) {
     }
 }
 
-// 버튼 클릭 이벤트 리스너
+// 버튼 클릭 이벤트 및 로드 시 실행 부분은 기존과 동일
 langButtons.forEach(btn => {
     btn.addEventListener('click', () => {
         const selectedLang = btn.getAttribute('data-value');
@@ -44,7 +52,6 @@ langButtons.forEach(btn => {
     });
 });
 
-// 페이지 로드 시 초기 언어 설정
 window.addEventListener('DOMContentLoaded', () => {
     const savedLang = localStorage.getItem('preferredLang') || 'ko';
     changeLanguage(savedLang);
