@@ -76,7 +76,7 @@ h3 {
     height: clamp(7.2rem, 24vw, 12rem);
     border-radius: 50%;
     margin: clamp(0.6rem, 2vw, 1rem);
-    outline: clamp(0.3rem, 1vw, 0.5rem) solid #3A7541; 
+    outline: clamp(0.3rem, 1vw, 0.5rem) solid #ed7457; 
     outline-offset: clamp(0.3rem, 1vw, 0.5rem);
 }
 
