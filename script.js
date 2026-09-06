@@ -56,3 +56,25 @@ window.addEventListener('DOMContentLoaded', () => {
     const savedLang = localStorage.getItem('preferredLang') || 'ko';
     changeLanguage(savedLang);
 });
+
+// site-card가 마우스를 살짝 따라가게 하는 효과 (macOS Dock 느낌)
+const siteCards = document.querySelectorAll('.site-card');
+const followStrength = 0.25; // 마우스를 따라가는 비율 (0~1, 클수록 많이 따라감)
+const maxOffset = 10; // 최대로 움직일 수 있는 픽셀 값
+
+siteCards.forEach(card => {
+    card.addEventListener('mousemove', (e) => {
+        const rect = card.getBoundingClientRect();
+        const relX = e.clientX - (rect.left + rect.width / 2);
+        const relY = e.clientY - (rect.top + rect.height / 2);
+
+        const offsetX = Math.max(Math.min(relX * followStrength, maxOffset), -maxOffset);
+        const offsetY = Math.max(Math.min(relY * followStrength, maxOffset), -maxOffset);
+
+        card.style.transform = `translate(${offsetX}px, ${offsetY}px)`;
+    });
+
+    card.addEventListener('mouseleave', () => {
+        card.style.transform = 'translate(0px, 0px)';
+    });
+});
