@@ -53,6 +53,7 @@ h1 {
     font-size: clamp(1.8rem, 6vw, 3rem);
 	margin: clamp(0.6rem, 2vw, 1rem);
 	color: #ffffff;
+    font-weight: normal;
 }
 
 h2 {
@@ -62,6 +63,7 @@ h2 {
 	padding-bottom: clamp(0.6rem, 2vw, 1rem);
 	margin: clamp(0.6rem, 2vw, 1rem);
 	color: #eabf8c;
+    font-weight: normal;
 }
 
 h3 {
@@ -69,6 +71,7 @@ h3 {
     margin-top: 0;
   	margin-bottom: clamp(0.3rem, 1vw, 0.5rem);
 	color: #eabf8c;
+    font-weight: normal;
 }
 
 .profile-img {
