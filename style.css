@@ -207,7 +207,7 @@ a:focus-visible {
 }
 
 .lang-btn {
-  font-family: var(--heading-font);
+  font-family: var(--serif-font);
   font-size: 0.875rem;
   padding: 0.5rem 1rem;
   background: var(--glass);
