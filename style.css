@@ -265,6 +265,11 @@ footer {
     padding: 1rem 1.2rem 1.1rem;
     border-radius: 1.5rem;
   }
+  
+  body {
+    background: var(--panel);
+    font-family: var(--serif-font);
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
