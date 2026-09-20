@@ -18,11 +18,8 @@ async function changeLanguage(lang) {
                 const rubyConverted = rawValue.replace(/\[(.+?)\]\((.+?)\)/g, '<ruby>$1<rt>$2</rt></ruby>');
 
                 if (el.tagName === 'TITLE') {
-                    // 브라우저 탭 제목(TITLE)에는 HTML 태그가 안 먹히니까,
-                    // 루비 문법에서 '단어'만 추출해서 넣어줌
                     document.title = rawValue.replace(/\[(.+?)\]\((.+?)\)/g, '$1');
                 } else {
-                    // 일반 요소에는 HTML 형태로 삽입 (textContent 대신 innerHTML 사용)
                     el.innerHTML = rubyConverted;
                 }
             }
