@@ -72,7 +72,7 @@ body {
   background: var(--bg);
   color: var(--text);
   font-size: 1rem;
-  line-height: 1.6;
+  line-height: 1.5;
   word-break: normal;
   overflow-wrap: anywhere;
 }
@@ -99,25 +99,25 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-  margin: 1rem;
-  font-size: 3rem;
-  line-height: 1.3;
+  line-height: 1;
+  margin: 2.5rem 0 0;
+  font-size: 2.5rem;
   color: var(--text-strong);
 }
 
 h2 {
-  margin: 1rem;
+  line-height: 1;
+  margin: 2.5rem 0 0;
   padding-bottom: 1rem;
   font-size: 2rem;
-  line-height: 1.35;
-  border-bottom: 0.15rem solid var(--line);
+  border-bottom: 1px solid var(--line);
 }
 
 h3 {
-  margin-top: 0;
-  margin-bottom: 0.5rem;
-  font-size: 1.5rem;
-  line-height: 1.35;
+  margin: 0;
+  padding-bottom: 0.5rem;
+  font-size: 1.6rem;
+  line-height: 1;
 }
 
 a {
@@ -167,13 +167,12 @@ a:focus-visible {
   left: 50%;
   transform: translateX(-50%);
   white-space: nowrap;
-  font-family: var(--serif-font);
+  font-family: var(--sans-font);
   padding: 0.3em 0.6em;
   border-radius: 0.4em;
   background-color: rgba(16, 16, 16, 0.9);
   color: var(--text-strong);
-  font-size: 0.875rem;
-  line-height: 1.4;
+  font-size: 1rem;
 }
 
 .site-card:hover .site-text {
@@ -191,27 +190,13 @@ a:focus-visible {
   height: fit-content;
   width: fit-content;
   margin: 0.5rem;
-  padding: 1.15rem 1.5rem 1.3rem;
+  padding: 1rem 1rem;
   background: var(--glass);
   font-family: var(--serif-font);
-  backdrop-filter: blur(16px) saturate(160%);
-  -webkit-backdrop-filter: blur(16px) saturate(160%);
   border: 1px solid var(--glass-border);
-  border-radius: 2rem;
+  border-radius: 1.5rem;
   box-shadow: var(--glass-shadow);
   color: var(--text-strong);
-}
-
-.details * {
-  opacity: 1;
-}
-
-.emoji {
-  height: 1em;
-  width: auto;
-  margin-bottom: 0.15em;
-  vertical-align: middle;
-  display: inline-block;
 }
 
 .color {
@@ -232,7 +217,7 @@ a:focus-visible {
 
 .lang-btn {
   font-family: var(--serif-font);
-  font-size: 0.875rem;
+  font-size: 1rem;
   padding: 0.5rem 1rem;
   background: var(--glass);
   backdrop-filter: blur(12px) saturate(160%);
@@ -259,15 +244,12 @@ footer {
   text-align: center;
   color: var(--muted);
   font-family: var(--sans-font);
-  font-size: 1rem;
 }
 
 @media (max-width: 560px) {
-  .container { padding: 1rem 1rem 1rem; }
-
-  h1 { font-size: 2.5rem; }
-  h2 { font-size: 1.75rem; }
-  h3 { font-size: 1.3rem; }
+  .article-header h1 { font-size: 2rem; }
+  .article-body h2 { font-size: 1.6rem; }
+  .article-body h3 { font-size: 1.3rem; }
 
   .profile-img {
     width: 8rem;
@@ -284,10 +266,7 @@ footer {
 
   .site-card { margin: 0.4rem; }
 
-  .details {
-    padding: 1rem 1.2rem 1.1rem;
-    border-radius: 1.5rem;
-  }
+  .details { padding: 1.5rem 1.25rem 3rem; }
   
   body { background: var(--panel); }
 }
