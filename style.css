@@ -1,13 +1,50 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+KR&family=Noto+Serif+JP&display=swap');
-@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css');
-@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-jp-dynamic-subset.min.css');
-@import url('https://fonts.googleapis.com/css2?family=LXGW+Marker+Gothic&display=swap');
+@font-face {
+  font-family: 'serifKr';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(/fonts/NotoSerifCJKkr-Regular-subset.otf) format('opentype');
+}
 
 @font-face {
-  font-family: 'HsSantoki20';
-  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2405@1.0/HSSanTokki20-Regular.woff2') format('woff2');
+  font-family: 'serifKr';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(/fonts/NotoSerifCJKkr-Bold-subset.otf) format('opentype');
+}
+
+@font-face {
+  font-family: 'serifSc';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(/fonts/NotoSerifSC-Regular.otf) format('opentype');
+  unicode-range: U+3400-4DBF, U+4E00-9FFF;
+}
+
+@font-face {
+  font-family: 'serifSc';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(/fonts/NotoSerifSC-Bold.otf) format('opentype');
+  unicode-range: U+3400-4DBF, U+4E00-9FFF;
+}
+
+@font-face {
+  font-family: 'headKr';
+  src: url('/fonts/HSSanTokki2.0(2024).ttf') format('truetype');
   font-weight: normal;
   font-display: swap;
+}
+
+@font-face {
+  font-family: 'headSc';
+  src: url('/fonts/LXGWMarkerGothic-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-display: swap;
+  unicode-range: U+3400-4DBF, U+4E00-9FFF;
 }
 
 :root {
@@ -25,10 +62,8 @@
   --glass-border: rgba(255, 255, 255, 0.18);
   --glass-shadow: 0 4px 20px rgba(0, 0, 0, 0.25), inset 0 1px 0 rgba(255, 255, 255, 0.1);
 
-  --sans-font: 'Pretendard Variable', 'Pretendard', 'Pretendard JP Variable', 'Pretendard JP',
-               -apple-system, 'Apple SD Gothic Neo', 'Malgun Gothic', sans-serif;
-  --serif-font: 'Noto Serif KR', 'Noto Serif JP', 'AppleMyungjo', 'Batang', serif;
-  --heading-font: 'HsSantoki20', 'LXGW Marker Gothic', var(--sans-font);
+  --serif-font: 'serifRm','serifSc', 'serifKr', 'Noto Serif SC', 'AppleMyungjo', 'Batang', serif;
+  --heading-font: 'headSc', 'headKr', 'Apple SD Gothic Neo', 'Malgun Gothic', sans-serif;
 
   color-scheme: dark;
   scrollbar-color: #303030 var(--bg);
