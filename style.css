@@ -289,10 +289,7 @@ footer {
     border-radius: 1.5rem;
   }
   
-  body {
-    background: var(--panel);
-    font-size: 0.9375rem;
-  }
+  body { background: var(--panel); }
 }
 
 @media (prefers-reduced-motion: reduce) {
