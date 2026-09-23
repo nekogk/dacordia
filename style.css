@@ -81,7 +81,7 @@ body {
   max-width: 50rem;
   min-height: 100vh;
   margin: 0 auto;
-  padding: 2rem;
+  padding: 2rem 2rem 1rem;
   background: var(--panel);
   scrollbar-color: #303030 var(--panel);
 }
@@ -243,6 +243,7 @@ a:focus-visible {
 }
 
 footer {
+  margin-top: 2rem;
   text-align: center;
   color: var(--muted);
   font-family: var(--sans-font);
