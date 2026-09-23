@@ -241,7 +241,7 @@ footer {
   font-family: var(--sans-font);
 }
 
-@media (max-width: 560px) {
+@media (max-width: 60rem) {
   .container { padding: 1rem; }
   .article-header h1 { font-size: 2rem; }
   .article-body h2 { font-size: 1.6rem; }
