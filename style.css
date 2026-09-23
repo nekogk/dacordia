@@ -79,7 +79,6 @@ body {
 }
 
 section {
-  margin-bottom: 1rem;
   display: flex;
   flex-wrap: wrap;
 }
@@ -91,25 +90,21 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-  line-height: 1;
   margin: 1.5rem 0 0;
   font-size: 2.5rem;
   color: var(--text-strong);
 }
 
 h2 {
-  line-height: 1;
   margin: 1.5rem 0 0;
-  padding-bottom: 1rem;
+  padding-bottom: 0.5rem;
   font-size: 2rem;
   border-bottom: 1px solid var(--line);
 }
 
 h3 {
   margin: 0;
-  padding-bottom: 0.5rem;
   font-size: 1.6rem;
-  line-height: 1;
 }
 
 a {
