@@ -6,17 +6,10 @@
 }
 
 @font-face {
-  font-family: 'serifKr';
+  font-family: 'sansSc';
   font-style: normal;
   font-display: swap;
-  src: url(/fonts/NotoSerifKR-Regular.ttf) format('truetype');
-}
-
-@font-face {
-  font-family: 'serifSc';
-  font-style: normal;
-  font-display: swap;
-  src: url(/fonts/NotoSerifSC-Regular.ttf) format('truetype');
+  src: url(/fonts/NotoSansSC-Regular.ttf) format('truetype');
   unicode-range: U+3400-4DBF, U+4E00-9FFF;
 }
 
@@ -50,8 +43,7 @@
   --glass-border: rgba(255, 255, 255, 0.18);
   --glass-shadow: 0 4px 20px rgba(0, 0, 0, 0.25), inset 0 1px 0 rgba(255, 255, 255, 0.1);
 
-  --sans-font: 'sansKr', 'Apple SD Gothic Neo', 'Malgun Gothic', sans-serif;
-  --serif-font: 'serifSc', 'serifKr', 'Noto Serif SC', 'AppleMyungjo', 'Batang', serif;
+  --sans-font: 'sansSc', 'sansKr', 'Apple SD Gothic Neo', 'Malgun Gothic', sans-serif;
   --heading-font: 'headSc', 'headKr', 'Apple SD Gothic Neo', 'Malgun Gothic', sans-serif;
 
   color-scheme: dark;
@@ -168,7 +160,7 @@ a:focus-visible {
   left: 50%;
   transform: translateX(-50%);
   white-space: nowrap;
-  font-family: var(--serif-font);
+  font-family: var(--sans-font);
   padding: 0.3em 0.6em;
   border-radius: 0.4em;
   background-color: rgba(16, 16, 16, 0.9);
@@ -194,7 +186,7 @@ a:focus-visible {
   margin-right: 1rem;
   padding: 1rem 1rem;
   background: var(--glass);
-  font-family: var(--serif-font);
+  font-family: var(--sans-font);
   border: 1px solid var(--glass-border);
   border-radius: 1.5rem;
   box-shadow: var(--glass-shadow);
@@ -218,7 +210,7 @@ a:focus-visible {
 }
 
 .lang-btn {
-  font-family: var(--serif-font);
+  font-family: var(--sans-font);
   font-size: 1rem;
   padding: 0.5rem 1rem;
   background: var(--glass);
