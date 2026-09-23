@@ -81,7 +81,7 @@ body {
   max-width: 50rem;
   min-height: 100vh;
   margin: 0 auto;
-  padding: 2rem 2rem 1rem;
+  padding: 2.5rem 2.5rem 1rem;
   background: var(--panel);
   scrollbar-color: #303030 var(--panel);
 }
