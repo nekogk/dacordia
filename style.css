@@ -70,10 +70,10 @@ body {
 }
 
 .container {
-  max-width: 64rem;
+  max-width: 65rem;
   min-height: 100vh;
   margin: 0 auto;
-  padding: 2.5rem 2.5rem 1rem;
+  padding: 2rem 2rem 1rem;
   background: var(--panel);
   scrollbar-color: #303030 var(--panel);
 }
@@ -240,8 +240,8 @@ footer {
   font-family: var(--sans-font);
 }
 
-@media (max-width: 64rem) {
-  .container { padding: 4vw; }
+@media (max-width: 65rem) {
+  .container { padding: 3vw; }
   .article-header h1 { font-size: 2rem; }
   .article-body h2 { font-size: 1.6rem; }
   .article-body h3 { font-size: 1.5rem; }
