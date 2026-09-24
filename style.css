@@ -79,8 +79,10 @@ body {
 }
 
 section {
+  margin: 1rem 0 0;
   display: flex;
   flex-wrap: wrap;
+  gap: 1rem;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -136,8 +138,6 @@ a:focus-visible {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 1rem;
-  margin-right: 1rem;
   border-radius: 0;
   background-color: var(--panel);
   cursor: pointer;
@@ -181,8 +181,6 @@ a:focus-visible {
 .details {
   height: fit-content;
   width: fit-content;
-  margin-top: 1rem;
-  margin-right: 1rem;
   padding: 0.5rem 1rem;
   background: var(--glass);
   font-family: var(--sans-font);
@@ -241,11 +239,12 @@ footer {
 }
 
 @media (max-width: 65rem) {
+  body { background: var(--panel); }
   .container { padding: 3vw; }
   .article-header h1 { font-size: 2rem; }
   .article-body h2 { font-size: 1.6rem; }
   .article-body h3 { font-size: 1.5rem; }
-  body { background: var(--panel); }
+  .site-icon { width: 6rem; height: 6rem; }
 }
 
 @media (prefers-reduced-motion: reduce) {
