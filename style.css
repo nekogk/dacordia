@@ -232,7 +232,7 @@ a:focus-visible {
 }
 
 footer {
-  margin-top: 2rem;
+  margin-top: 2.5rem;
   text-align: center;
   color: var(--muted);
   font-family: var(--sans-font);
