@@ -41,7 +41,7 @@
   --glass: rgba(255, 255, 255, 0.08);
   --glass-hover: rgba(255, 255, 255, 0.16);
   --glass-border: rgba(255, 255, 255, 0.18);
-  --glass-shadow: 1px 1px 1rem rgba(0, 0, 0, 0.24), inset 1px 1px 0 rgba(255, 255, 255, 0.24);
+  --glass-shadow: 1px 1px 1rem rgba(0, 0, 0, 0.24), inset 1px 1px 1px rgba(255, 255, 255, 0.24);
 
   --sans-font: 'sansSc', 'sansKr', 'Apple SD Gothic Neo', 'Malgun Gothic', sans-serif;
   --heading-font: 'headSc', 'headKr', 'Apple SD Gothic Neo', 'Malgun Gothic', sans-serif;
