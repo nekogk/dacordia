@@ -38,10 +38,9 @@
   --beige: #eabf8c;
   --coral: #ed7457;
 
-  --glass: rgba(255, 255, 255, 0.08);
-  --glass-hover: rgba(255, 255, 255, 0.16);
-  --glass-border: rgba(255, 255, 255, 0.18);
-  --glass-shadow: 1px 1px 1rem rgba(0, 0, 0, 0.24), inset 1px 1px 1px rgba(255, 255, 255, 0.24);
+  --glass: rgba(255, 255, 255, 0.07);
+  --glass-hover: rgba(255, 255, 255, 0.14);
+  --glass-border: rgba(255, 255, 255, 0.21);
 
   --sans-font: 'sansSc', 'sansKr', 'Apple SD Gothic Neo', 'Malgun Gothic', sans-serif;
   --heading-font: 'headSc', 'headKr', 'Apple SD Gothic Neo', 'Malgun Gothic', sans-serif;
@@ -144,7 +143,6 @@ a:focus-visible {
   cursor: pointer;
   transition: transform 0.15s ease-out;
   will-change: transform;
-  box-shadow: 1px 1px 1rem rgba(0, 0, 0, 0.24);
 }
 
 .site-icon {
@@ -188,7 +186,6 @@ a:focus-visible {
   font-family: var(--sans-font);
   border: 1px solid var(--glass-border);
   border-radius: 1.5rem;
-  box-shadow: var(--glass-shadow);
   color: var(--text-strong);
 }
 
@@ -219,7 +216,6 @@ a:focus-visible {
   -webkit-backdrop-filter: blur(12px) saturate(160%);
   border: 1px solid var(--glass-border);
   border-radius: 1.25rem;
-  box-shadow: var(--glass-shadow);
   color: var(--text-strong);
   cursor: pointer;
   transition: background 0.2s ease, border-color 0.2s ease;
