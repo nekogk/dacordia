@@ -67,10 +67,10 @@ body {
 }
 
 .container {
-  max-width: 66rem;
+  max-width: 64rem;
   min-height: 100vh;
   margin: 0 auto;
-  padding: 2.5rem;
+  padding: 1.5rem;
   background: var(--panel);
   scrollbar-color: #303030 var(--panel);
 }
@@ -96,7 +96,7 @@ h1 {
 }
 
 h2 {
-  margin: 2.5rem 0 0;
+  margin: 1.5rem 0 0;
   line-height: 2.5rem;
   padding-bottom: 0.5rem;
   font-size: 2rem;
@@ -237,9 +237,9 @@ footer {
   font-family: var(--sans-font);
 }
 
-@media (max-width: 66rem) {
+@media (max-width: 64rem) {
   body { background: var(--panel); }
-  .container { padding: 4vw; }
+  .container { padding: 2vw; }
   .article-header h1 { font-size: 2rem; }
   .article-body h2 { font-size: 1.6rem; }
   .article-body h3 { font-size: 1.5rem; }
