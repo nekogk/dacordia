@@ -44,7 +44,7 @@
   --heading-font: 'headSc', 'headKr', 'Apple SD Gothic Neo', 'Malgun Gothic', sans-serif;
 
   color-scheme: dark;
-  scrollbar-color: #222222 #00000000;
+  scrollbar-color: var(--panel) transparent;
 }
 
 *, *::before, *::after { box-sizing: border-box; }
@@ -111,13 +111,9 @@ h3 {
   line-height: 2.1rem;
 }
 
-a {
-  text-decoration: none;
-}
-
 a:focus-visible {
-  outline: 2px solid var(--beige);
-  outline-offset: 3px;
+  outline: 1px solid var(--beige);
+  outline-offset: 1px;
 }
 
 .profile-img {
@@ -142,6 +138,8 @@ a:focus-visible {
   cursor: pointer;
   transition: transform 0.15s ease-out;
   will-change: transform;
+  transition: outline 0.2s ease;
+  outline: 2px solid transparent;
 }
 
 .site-icon {
@@ -208,6 +206,7 @@ a:focus-visible {
   -webkit-backdrop-filter: blur(12px) saturate(160%);
   border: 1px solid var(--line);
   border-radius: 1.25rem;
+  outline: 0;
   color: var(--text-strong);
   cursor: pointer;
   transition: background 0.2s ease, border-color 0.2s ease;
@@ -216,6 +215,8 @@ a:focus-visible {
 .lang-btn:hover {
   background: var(--glass-hover);
 }
+
+.lang-btn:focus { border-color: var(--beige); }
 
 .lang-btn.active {
   background: rgba(234, 191, 140, 0.3);
