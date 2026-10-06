@@ -44,7 +44,7 @@
   --heading-font: 'headSc', 'headKr', 'Apple SD Gothic Neo', 'Malgun Gothic', sans-serif;
 
   color-scheme: dark;
-  scrollbar-color: #303030 var(--bg);
+  scrollbar-color: #222222 #00000000;
 }
 
 *, *::before, *::after { box-sizing: border-box; }
@@ -53,6 +53,7 @@ html {
   background: var(--bg);
   scrollbar-gutter: stable;
   -webkit-text-size-adjust: 100%;
+  background: var(--bg);
 }
 
 body {
@@ -72,7 +73,6 @@ body {
   margin: 0 auto;
   padding: 2rem;
   background: var(--panel);
-  scrollbar-color: #303030 var(--panel);
 }
 
 section {
@@ -170,13 +170,6 @@ a:focus-visible {
   display: block;
 }
 
-::-webkit-scrollbar { width: 0.5rem; height: 0.5rem; }
-::-webkit-scrollbar-track { background: var(--bg); }
-::-webkit-scrollbar-thumb { background: #303030; border-radius: 0.5rem; }
-::-webkit-scrollbar-thumb:hover { background: #404040; }
-
-.container *::-webkit-scrollbar-track { background: var(--panel); }
-
 .details {
   height: fit-content;
   width: fit-content;
@@ -238,8 +231,9 @@ footer {
 }
 
 @media (max-width: 65rem) {
-  body { background: var(--panel); }
+  body, html { background: var(--panel); }
   .container { padding: 3vw; }
+  :root { scrollbar-color: #333333 #00000000; }
   .article-header h1 { font-size: 2rem; }
   .article-body h2 { font-size: 1.6rem; }
   .article-body h3 { font-size: 1.5rem; }
