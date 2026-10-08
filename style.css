@@ -73,7 +73,7 @@ body {
   max-width: 50rem;
   min-height: 100vh;
   margin: 0 auto;
-  padding: 1.5rem;
+  padding: 2rem;
   background: var(--panel);
 }
 
@@ -91,21 +91,19 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-  margin: 1.5rem 0 0;
+  margin: 1rem 0 0;
   font-size: 2.5rem;
   line-height: 3rem;
   color: var(--text-strong);
 }
 
 h2 {
-  margin: 1.5rem 0 0;
+  margin: 2rem 0 0;
   line-height: 2.5rem;
   padding-bottom: 0.5rem;
   font-size: 2rem;
   border-bottom: 1px solid var(--line);
 }
-
-h1 + h2 { margin: 1.5rem 0 0; }
 
 h3 {
   margin: 0;
@@ -228,7 +226,7 @@ a:focus-visible {
 }
 
 footer {
-  margin-top: 1.5rem;
+  margin-top: 2rem;
   text-align: center;
   color: var(--muted);
   font-family: var(--sans-font);
@@ -236,7 +234,7 @@ footer {
 
 @media (max-width: 50rem) {
   body, html { background: var(--panel); }
-  .container { padding: 3vw; }
+  .container { padding: 4vw; }
   :root { scrollbar-color: var(--glass) transparent; }
   .article-header h1 { font-size: 2rem; }
   .article-body h2 { font-size: 1.6rem; }
