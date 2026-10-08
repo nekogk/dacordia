@@ -49,6 +49,8 @@
 
 *, *::before, *::after { box-sizing: border-box; }
 
+p { margin: 0;}
+
 html {
   background: var(--bg);
   scrollbar-gutter: stable;
@@ -68,10 +70,10 @@ body {
 }
 
 .container {
-  max-width: 60rem;
+  max-width: 50rem;
   min-height: 100vh;
   margin: 0 auto;
-  padding: 2.5rem;
+  padding: 1.5rem;
   background: var(--panel);
 }
 
@@ -196,16 +198,17 @@ a:focus-visible {
 }
 
 .lang-btn {
-  width: 2.5rem;
-  height: 2.5rem;
+  width: 2rem;
+  height: 2rem;
   text-align: center;
+  white-space: nowrap;
   font-family: var(--sans-font);
   font-size: 1rem;
   background: var(--glass);
   backdrop-filter: blur(12px) saturate(160%);
   -webkit-backdrop-filter: blur(12px) saturate(160%);
   border: 1px solid var(--line);
-  border-radius: 1.25rem;
+  border-radius: 1rem;
   outline: 0;
   color: var(--text-strong);
   cursor: pointer;
@@ -225,16 +228,16 @@ a:focus-visible {
 }
 
 footer {
-  margin-top: 0;
+  margin-top: 1.5rem;
   text-align: center;
   color: var(--muted);
   font-family: var(--sans-font);
 }
 
-@media (max-width: 60rem) {
+@media (max-width: 50rem) {
   body, html { background: var(--panel); }
-  .container { padding: 4vw; }
-  :root { scrollbar-color: #333333 #00000000; }
+  .container { padding: 3vw; }
+  :root { scrollbar-color: var(--glass) transparent; }
   .article-header h1 { font-size: 2rem; }
   .article-body h2 { font-size: 1.6rem; }
   .article-body h3 { font-size: 1.5rem; }
