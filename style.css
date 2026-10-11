@@ -196,8 +196,8 @@ a:focus-visible {
 }
 
 .lang-btn {
-  width: 2rem;
-  height: 2rem;
+  width: 2.5rem;
+  height: 2.5rem;
   text-align: center;
   white-space: nowrap;
   font-family: var(--sans-font);
@@ -206,7 +206,7 @@ a:focus-visible {
   backdrop-filter: blur(12px) saturate(160%);
   -webkit-backdrop-filter: blur(12px) saturate(160%);
   border: 1px solid var(--line);
-  border-radius: 1rem;
+  border-radius: 1.25rem;
   outline: 0;
   color: var(--text-strong);
   cursor: pointer;
