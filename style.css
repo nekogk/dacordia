@@ -107,8 +107,8 @@ h2 {
 
 h3 {
   margin: 0;
-  font-size: 1.6rem;
-  line-height: 2.1rem;
+  font-size: 1.75rem;
+  line-height: 2.25rem;
 }
 
 a:focus-visible {
@@ -237,7 +237,7 @@ footer {
   .container { padding: 4vw; }
   :root { scrollbar-color: var(--glass) transparent; }
   .article-header h1 { font-size: 2rem; }
-  .article-body h2 { font-size: 1.6rem; }
+  .article-body h2 { font-size: 1.67rem; }
   .article-body h3 { font-size: 1.5rem; }
   .site-card, .site-icon { width: 6rem; height: 6rem; }
   .profile-img { width: 10rem; height: 10rem; }
