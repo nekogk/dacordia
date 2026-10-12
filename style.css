@@ -234,11 +234,14 @@ footer {
 
 @media (max-width: 50rem) {
   body, html { background: var(--panel); }
-  .container { padding: 4vw; }
   :root { scrollbar-color: var(--glass) transparent; }
+}
+
+@media (max-width: 37.5rem) {
   .article-header h1 { font-size: 2rem; line-height:2.5rem; }
   .article-body h2 { font-size: 1.67rem; line-height:2.17rem; }
   .article-body h3 { font-size: 1.5rem; line-height:2rem; }
+  .container { padding: 1rem; }
   .site-card, .site-icon { width: 6rem; height: 6rem; }
   .profile-img { width: 10rem; height: 10rem; }
 }
