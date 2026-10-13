@@ -33,18 +33,20 @@
   --panel: #222222;
   --glass: #333333;
   --glass-hover: #444444;
+  --glass-active: #eabf8c33;
   --line: #555555;
   --muted: #999999;
-  --text: #eeeeee;
-  --text-strong: #ffffff;
+  --text: #ffffff;
+  --green: #61c26c;
   --beige: #eabf8c;
   --coral: #ed7457;
+  --pink: #f3a6c0;
 
   --sans-font: 'sansSc', 'sansKr', 'Apple SD Gothic Neo', 'Malgun Gothic', sans-serif;
   --heading-font: 'headSc', 'headKr', 'Apple SD Gothic Neo', 'Malgun Gothic', sans-serif;
 
   color-scheme: dark;
-  scrollbar-color: var(--panel) transparent;
+  scrollbar-color: var(--line) transparent;
 }
 
 *, *::before, *::after { box-sizing: border-box; }
@@ -191,13 +193,13 @@ a:focus-visible {
 .lang-selector {
   display: flex;
   justify-content: flex-end;
-  gap: 0.5rem;
+  gap: 1rem;
   margin: 0 0 1rem;
 }
 
 .lang-btn {
-  width: 2.5rem;
-  height: 2.5rem;
+  width: 5rem;
+  height: 2rem;
   text-align: center;
   white-space: nowrap;
   font-family: var(--sans-font);
@@ -206,22 +208,20 @@ a:focus-visible {
   backdrop-filter: blur(12px) saturate(160%);
   -webkit-backdrop-filter: blur(12px) saturate(160%);
   border: 1px solid var(--line);
-  border-radius: 1.25rem;
+  border-radius: 1rem;
   outline: 0;
   color: var(--text-strong);
   cursor: pointer;
   transition: background 0.2s ease, border-color 0.2s ease;
 }
 
-.lang-btn:hover {
-  background: var(--glass-hover);
-}
+.lang-btn:hover { background: var(--glass-hover); }
 
 .lang-btn:focus { border-color: var(--beige); }
 
 .lang-btn.active {
-  background: rgba(234, 191, 140, 0.3);
-  border-color: rgba(234, 191, 140, 0.6);
+  background: var(--glass-active);
+  border-color: var(--beige);
   color: var(--text-strong);
 }
 
@@ -234,7 +234,6 @@ footer {
 
 @media (max-width: 47.99rem) {
   body, html { background: var(--panel); }
-  :root { scrollbar-color: var(--glass) transparent; }
   .article-header h1 { font-size: 2rem; line-height:2.5rem; }
   .article-body h2 { font-size: 1.67rem; line-height:2.17rem; }
   .article-body h3 { font-size: 1.5rem; line-height:2rem; }
