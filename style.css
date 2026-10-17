@@ -96,7 +96,7 @@ h1 {
   margin: 1rem 0 0;
   font-size: 2.5rem;
   line-height: 3rem;
-  color: var(--text-strong);
+  color: var(--text);
 }
 
 h2 {
@@ -162,7 +162,7 @@ a:focus-visible {
   padding: 0.3em 0.6em;
   border-radius: 0.4em;
   background-color: rgba(16, 16, 16, 0.9);
-  color: var(--text-strong);
+  color: var(--text);
   font-size: 1rem;
 }
 
@@ -178,7 +178,7 @@ a:focus-visible {
   font-family: var(--sans-font);
   border: 1px solid var(--line);
   border-radius: 1.5rem;
-  color: var(--text-strong);
+  color: var(--text);
 }
 
 .color {
@@ -210,7 +210,7 @@ a:focus-visible {
   border: 1px solid var(--line);
   border-radius: 1rem;
   outline: 0;
-  color: var(--text-strong);
+  color: var(--text);
   cursor: pointer;
   transition: background 0.2s ease, border-color 0.2s ease;
 }
@@ -222,7 +222,7 @@ a:focus-visible {
 .lang-btn.active {
   background: var(--glass-active);
   border-color: var(--beige);
-  color: var(--text-strong);
+  color: var(--text);
 }
 
 footer {
