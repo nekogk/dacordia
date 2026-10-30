@@ -265,19 +265,18 @@ a:focus-visible {
   display: inline-block;
 }
 
-/* ── 언어 버튼 ── */
 .lang-selector {
-  display: flex;
+  max_width: 29rem
   flex-wrap: wrap;
   justify-content: flex-end;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
   gap: 1rem;
   margin: 0 0 1rem;
 }
 
-/* ── 언어·테마 버튼 (같은 모양) ── */
 .lang-btn,
 .theme-btn {
-  width: 5rem;
   height: 2rem;
   text-align: center;
   white-space: nowrap;
