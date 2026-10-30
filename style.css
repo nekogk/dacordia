@@ -266,7 +266,7 @@ a:focus-visible {
 }
 
 .lang-selector {
-  max_width: 29rem
+  width: 29rem
   flex-wrap: wrap;
   justify-content: flex-end;
   display: grid;
