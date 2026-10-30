@@ -438,9 +438,9 @@ footer {
   .container { padding: 1rem; box-shadow: none; }
   .site-card, .site-icon { width: 6rem; height: 6rem; }
   .profile-img { width: 10rem; height: 10rem; }
-  .article-header h1 { font-size: 2rem; line-height: 2.5rem; }
-  .article-body h2 { font-size: 1.67rem; line-height: 2.17rem; }
-  .article-body h3 { font-size: 1.5rem; line-height: 2rem; }
+  h1 { font-size: 2rem; line-height: 2.5rem; }
+  h2 { font-size: 1.67rem; line-height: 2.17rem; }
+  h3 { font-size: 1.5rem; line-height: 2rem; }
 }
 
 @media (prefers-reduced-motion: reduce) {
