@@ -49,6 +49,23 @@
   scrollbar-color: var(--line) transparent;
 }
 
+:root[data-theme="light"] {
+  --bg: #eeeeee;
+  --panel: #f8f8f8;
+  --glass: #ffffff;
+  --glass-hover: #dddddd;
+  --glass-active: #b68d5b33;
+  --line: #cccccc;
+  --muted: #777777;
+  --text: #111111;
+  --green: #61c26c;
+  --beige: #b68d5b;
+  --coral: #ed7457;
+  --pink: #c287e0;
+
+  color-scheme: light;
+}
+
 *, *::before, *::after { box-sizing: border-box; }
 
 p { margin: 0;}
@@ -57,7 +74,7 @@ html {
   background: var(--bg);
   scrollbar-gutter: stable;
   -webkit-text-size-adjust: 100%;
-  background: var(--bg);
+  transition: background 0.2s ease;
 }
 
 body {
@@ -69,6 +86,14 @@ body {
   line-height: 1.5;
   word-break: normal;
   overflow-wrap: anywhere;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transition: background 0.2s ease;
+}
+
+::selection {
+  background: var(--glass-active);
+  color: var(--text);
 }
 
 .container {
@@ -77,6 +102,8 @@ body {
   margin: 0 auto;
   padding: 2rem;
   background: var(--panel);
+  box-shadow: -1px 0 0 var(--line), 1px 0 0 var(--line);
+  transition: background 0.2s ease, box-shadow 0.2s ease;
 }
 
 section {
@@ -89,14 +116,26 @@ section {
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--heading-font);
   font-weight: normal;
+  color: var(--text);
+  letter-spacing: -0.01em;
+}
+
+h2[data-num]::before {
+  content: attr(data-num) " ";
   color: var(--beige);
+  font-variant-numeric: tabular-nums;
+  letter-spacing: 0;
 }
 
 h1 {
   margin: 1rem 0 0;
+  padding-bottom: 1rem;
   font-size: 2.5rem;
   line-height: 3rem;
+  letter-spacing: -0.02em;
   color: var(--text);
+  border-bottom: 1px solid var(--line);
+  border-image: linear-gradient(90deg, var(--beige), var(--line) 40%, var(--line) 70%, transparent) 1;
 }
 
 h2 {
@@ -105,6 +144,7 @@ h2 {
   padding-bottom: 0.5rem;
   font-size: 2rem;
   border-bottom: 1px solid var(--line);
+  border-image: linear-gradient(90deg, var(--beige), var(--line) 40%, var(--line) 70%, transparent) 1;
 }
 
 h3 {
@@ -113,9 +153,14 @@ h3 {
   line-height: 2.25rem;
 }
 
+a {
+  outline: 1px solid transparent;
+  transition: outline-color 0.15s ease;
+}
+
 a:focus-visible {
   outline: 1px solid var(--beige);
-  outline-offset: 1px;
+  outline-offset: 2px;
 }
 
 .profile-img {
@@ -135,13 +180,17 @@ a:focus-visible {
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 25%;
+  border-radius: 0;
   background-color: var(--panel);
   cursor: pointer;
-  transition: transform 0.15s ease-out;
   will-change: transform;
-  transition: outline 0.2s ease;
-  outline: 2px solid transparent;
+  transition: transform 0.15s ease-out, outline-color 0.15s ease;
+  outline: 1px solid transparent;
+}
+
+.site-card:focus-visible {
+  outline: 1px solid var(--beige);
+  outline-offset: 2px;
 }
 
 .site-icon {
@@ -160,84 +209,234 @@ a:focus-visible {
   white-space: nowrap;
   font-family: var(--sans-font);
   padding: 0.3em 0.6em;
-  border-radius: 0.4em;
-  background-color: rgba(16, 16, 16, 0.9);
+  border: 1px solid var(--line);
+  border-top-color: var(--beige);
+  border-radius: 0;
+  background-color: var(--glass);
   color: var(--text);
   font-size: 1rem;
+  z-index: 1;
 }
 
-.site-card:hover .site-text {
+.site-card:hover .site-text,
+.site-card:focus-visible .site-text {
   display: block;
 }
 
+/* 소개 카드: 직각, 맨 위 2px 베이지 선이 오른쪽으로 사라짐 */
 .details {
+  position: relative;
   height: fit-content;
   width: fit-content;
   padding: 0.5rem 1rem;
   background: var(--glass);
   font-family: var(--sans-font);
   border: 1px solid var(--line);
-  border-radius: 1.5rem;
+  border-radius: 0;
   color: var(--text);
+  transition: background 0.2s ease, border-color 0.2s ease;
+}
+
+.details::before {
+  content: '';
+  position: absolute;
+  top: -1px;
+  left: -1px;
+  right: -1px;
+  height: 2px;
+  background: linear-gradient(90deg, var(--beige), transparent 70%);
+  opacity: 0.8;
+  pointer-events: none;
+}
+
+.details code {
+  padding: 0 0.25em;
+  background: var(--bg);
+  box-shadow: 0 0 0 1px var(--line);
 }
 
 .color {
   width: 1em;
   height: 1em;
   margin-bottom: 0.15em;
-  border-radius: 0.2em;
+  border-radius: 0;
+  box-shadow: 0 0 0 1px var(--line);
   vertical-align: middle;
   display: inline-block;
 }
 
+/* ── 언어 버튼 ── */
 .lang-selector {
   display: flex;
+  flex-wrap: wrap;
   justify-content: flex-end;
   gap: 1rem;
   margin: 0 0 1rem;
 }
 
-.lang-btn {
+/* ── 언어·테마 버튼 (같은 모양) ── */
+.lang-btn,
+.theme-btn {
   width: 5rem;
   height: 2rem;
   text-align: center;
   white-space: nowrap;
   font-family: var(--sans-font);
   font-size: 1rem;
-  background: var(--glass);
-  backdrop-filter: blur(12px) saturate(160%);
-  -webkit-backdrop-filter: blur(12px) saturate(160%);
+  background: transparent;
   border: 1px solid var(--line);
-  border-radius: 1rem;
+  border-radius: 0;
   outline: 0;
-  color: var(--text);
+  color: var(--muted);
   cursor: pointer;
-  transition: background 0.2s ease, border-color 0.2s ease;
+  transition: background 0.15s ease, border-color 0.15s ease, color 0.15s ease, box-shadow 0.15s ease;
 }
 
-.lang-btn:hover { background: var(--glass-hover); }
+.theme-btn { width: 4rem; }
 
-.lang-btn:focus { border-color: var(--beige); }
-
-.lang-btn.active {
-  background: var(--glass-active);
-  border-color: var(--beige);
+.lang-btn:hover,
+.theme-btn:hover {
+  background: var(--glass-hover);
   color: var(--text);
+}
+
+.lang-btn:focus-visible,
+.theme-btn:focus-visible { border-color: var(--beige); }
+
+.lang-btn.active,
+.theme-btn.active {
+  background: var(--glass-active);
+  box-shadow: inset 0 -2px 0 var(--beige);
+  color: var(--beige);
 }
 
 footer {
   margin-top: 2rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--line);
   text-align: center;
   color: var(--muted);
   font-family: var(--sans-font);
+  font-size: 0.875rem;
+  letter-spacing: 0.04em;
+}
+
+/* ── 사이드바 (64rem 이상에서만 표시) ── */
+.site-side {
+  display: none;
+  font-family: var(--sans-font);
+}
+
+@media (min-width: 64rem) {
+  html { scroll-padding-top: 2rem; }
+
+  body {
+    display: flex;
+    justify-content: center;
+  }
+
+  .container {
+    flex: 0 0 48rem;
+    min-width: 0;
+    margin: 0;
+    box-shadow: -1px 0 0 var(--line);
+  }
+
+  .site-side {
+    display: block;
+    flex: none;
+    padding: 2rem;
+    padding-left: 0;
+    width: 16rem;
+    background: var(--panel);
+    box-shadow: 1px 0 0 var(--line);
+    transition: background 0.2s ease, box-shadow 0.2s ease;
+  }
+
+  .site-side-inner {
+    position: sticky;
+    top: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    max-height: calc(100vh - 4rem);
+  }
+
+  /* 사이드바 안의 언어 버튼: 2칸씩 두 줄 */
+  .site-side-lang { flex: none; }
+
+  .site-side .lang-selector {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin: 0;
+  }
+
+  .site-side .lang-btn { width: auto; }
+
+  .site-theme {
+    flex: none;
+    display: flex;
+    gap: 1rem;
+  }
+
+  .site-toc {
+    min-height: 0;
+    overflow-y: auto;
+    border: 1px solid var(--line);
+    border-top-color: var(--beige);
+    scrollbar-color: var(--line) transparent;
+  }
+
+  .site-toc[hidden] { display: none; }
+
+  .site-toc-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .site-toc-item a {
+    outline: none;
+    display: flex;
+    align-items: center;
+    height: calc(2rem - 2px);
+    padding: 0 0.75rem;
+    border: 1px solid transparent;
+    color: var(--text);
+    text-decoration: none;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    touch-action: manipulation;
+    transition: background 0.12s ease, border-color 0.12s ease, box-shadow 0.12s ease, color 0.12s ease;
+  }
+
+  .site-toc-num {
+    flex: none;
+    margin-right: 0.25em;
+    color: var(--beige);
+    font-variant-numeric: tabular-nums;
+  }
+
+  .site-toc-text {
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .site-toc-item a:hover {
+    background: var(--glass-hover);
+    box-shadow: inset 2px 0 0 var(--beige);
+    color: var(--beige);
+  }
+
+  .site-toc-item a:focus-visible { border-color: var(--beige); }
 }
 
 @media (max-width: 47.99rem) {
   body, html { background: var(--panel); }
-  .article-header h1 { font-size: 2rem; line-height:2.5rem; }
-  .article-body h2 { font-size: 1.67rem; line-height:2.17rem; }
-  .article-body h3 { font-size: 1.5rem; line-height:2rem; }
-  .container { padding: 1rem; }
+  .container { padding: 1rem; box-shadow: none; }
   .site-card, .site-icon { width: 6rem; height: 6rem; }
   .profile-img { width: 10rem; height: 10rem; }
 }

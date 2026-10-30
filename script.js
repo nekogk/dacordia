@@ -36,12 +36,14 @@ async function changeLanguage(lang) {
         // 5. 언어 설정 저장
         localStorage.setItem('preferredLang', lang);
 
+        // 6. 바뀐 제목으로 목차 다시 그리기
+        renderToc();
+
     } catch (error) {
         console.error('번역 데이터를 불러오는 중 오류 발생:', error);
     }
 }
 
-// 버튼 클릭 이벤트 및 로드 시 실행 부분은 기존과 동일
 langButtons.forEach(btn => {
     btn.addEventListener('click', () => {
         const selectedLang = btn.getAttribute('data-value');
@@ -54,10 +56,9 @@ window.addEventListener('DOMContentLoaded', () => {
     changeLanguage(savedLang);
 });
 
-// site-card가 마우스를 살짝 따라가게 하는 효과 (macOS Dock 느낌)
 const siteCards = document.querySelectorAll('.site-card');
-const followStrength = 0.25; // 마우스를 따라가는 비율 (0~1, 클수록 많이 따라감)
-const maxOffset = 10; // 최대로 움직일 수 있는 픽셀 값
+const followStrength = 0.25;
+const maxOffset = 10;
 
 siteCards.forEach(card => {
     card.addEventListener('mousemove', (e) => {
@@ -75,3 +76,71 @@ siteCards.forEach(card => {
         card.style.transform = 'translate(0px, 0px)';
     });
 });
+
+const WIDE = matchMedia('(min-width: 64rem)');
+const langBox = document.querySelector('.lang-selector');
+const langHome = document.querySelector('.container');
+const langSlot = document.querySelector('.site-side-lang');
+
+function placeLang() {
+    if (!langBox || !langSlot) return;
+    const focused = langBox.contains(document.activeElement) ? document.activeElement : null;
+    if (WIDE.matches) {
+        if (langBox.parentElement !== langSlot) langSlot.append(langBox);
+    } else if (langBox.parentElement !== langHome) {
+        langHome.prepend(langBox);
+    }
+    focused?.focus();
+}
+
+placeLang();
+WIDE.addEventListener('change', placeLang);
+
+const headings = [...document.querySelectorAll('.container h2')];
+
+headings.forEach((h, i) => {
+    h.dataset.num = `${i + 1}.`;
+    h.id = String(i + 1);
+});
+
+function headingText(h) {
+    const copy = h.cloneNode(true);
+    copy.querySelectorAll('rt, rp').forEach(el => el.remove());
+    return copy.textContent.replace(/\s+/g, ' ').trim();
+}
+
+function renderToc() {
+    const nav = document.querySelector('.site-toc');
+    if (!nav) return;
+    if (!headings.length) { nav.hidden = true; return; }
+
+    const ol = document.createElement('ol');
+    ol.className = 'site-toc-list';
+    for (const h of headings) {
+        const text = headingText(h);
+        const li = document.createElement('li');
+        li.className = 'site-toc-item';
+
+        const a = document.createElement('a');
+        a.href = `#${h.id}`;
+        a.title = `${h.dataset.num} ${text}`;
+
+        const num = document.createElement('span');
+        num.className = 'site-toc-num';
+        num.textContent = h.dataset.num;
+        const label = document.createElement('span');
+        label.className = 'site-toc-text';
+        label.textContent = text;
+
+        a.append(num, label);
+        li.append(a);
+        ol.append(li);
+    }
+    nav.replaceChildren(ol);
+    nav.hidden = false;
+}
+
+renderToc();
+if (location.hash) {
+    try { document.getElementById(decodeURIComponent(location.hash.slice(1)))?.scrollIntoView(); } catch {}
+}

@@ -6,11 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title data-i18n="title">다코 | 노란토끼</title>
 	<link rel="icon" href="icon.svg" type="image/x-icon">
+	<script src="theme.js"></script>
 	<link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
-        <div class="lang-selector">
+        <div class="lang-selector" role="group" aria-label="언어">
             <button type="button" class="lang-btn" data-value="ko">한국어</button>
             <button type="button" class="lang-btn" data-value="en">English</button>
             <button type="button" class="lang-btn" data-value="ja">日本語</button>
@@ -153,6 +154,18 @@
             <p>© 2026 Raeyon Kim. All rights reserved.</p>
         </footer>
     </div>
+
+    <aside class="site-side">
+        <div class="site-side-inner">
+            <div class="site-side-lang"></div>
+            <div class="site-theme" role="group" aria-label="테마">
+                <button type="button" class="theme-btn" data-theme-choice="system">시스템</button>
+                <button type="button" class="theme-btn" data-theme-choice="light">라이트</button>
+                <button type="button" class="theme-btn" data-theme-choice="dark">다크</button>
+            </div>
+            <nav class="site-toc" aria-label="목차" hidden></nav>
+        </div>
+    </aside>
 	<script src="script.js"></script>
 </body>
 </html>
