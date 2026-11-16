@@ -1,14 +1,10 @@
 @font-face {
   font-family: 'sansKr';
-  font-style: normal;
-  font-display: swap;
   src: url(/fonts/Pretendard-Regular.otf) format('opentype');
 }
 
 @font-face {
   font-family: 'sansSc';
-  font-style: normal;
-  font-display: swap;
   src: url(/fonts/NotoSansSC-Regular.ttf) format('truetype');
   unicode-range: U+3400-4DBF, U+4E00-9FFF;
 }
@@ -16,15 +12,11 @@
 @font-face {
   font-family: 'headKr';
   src: url('/fonts/HSSanTokki2.0(2024).ttf') format('truetype');
-  font-weight: normal;
-  font-display: swap;
 }
 
 @font-face {
   font-family: 'headSc';
   src: url('/fonts/LXGWMarkerGothic-Regular.ttf') format('truetype');
-  font-weight: normal;
-  font-display: swap;
   unicode-range: U+3400-4DBF, U+4E00-9FFF;
 }
 
