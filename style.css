@@ -215,7 +215,6 @@ a:focus-visible {
   display: block;
 }
 
-/* 소개 카드: 직각, 맨 위 2px 베이지 선이 오른쪽으로 사라짐 */
 .details {
   position: relative;
   height: fit-content;
@@ -258,7 +257,7 @@ a:focus-visible {
 }
 
 .lang-selector {
-  width: 29rem;
+  width: 100%;
   flex-wrap: wrap;
   justify-content: flex-end;
   display: grid;
@@ -353,7 +352,6 @@ footer {
     max-height: calc(100vh - 4rem);
   }
 
-  /* 사이드바 안의 언어 버튼: 2칸씩 두 줄 */
   .site-side-lang { flex: none; }
 
   .site-side .lang-selector {
